@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1164</width>
-    <height>644</height>
+    <height>899</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
       <x>600</x>
       <y>0</y>
       <width>561</width>
-      <height>371</height>
+      <height>361</height>
      </rect>
     </property>
    </widget>
@@ -103,13 +103,13 @@
      <string>Angle:</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>391</y>
+      <y>370</y>
       <width>82</width>
-      <height>199</height>
+      <height>228</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -156,6 +156,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="modifyAButton">
+       <property name="text">
+        <string>ModifyA</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="saveButton">
        <property name="text">
         <string>SavePra</string>
@@ -163,6 +170,26 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QTableView" name="tableView_ShowPoint">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>600</y>
+      <width>601</width>
+      <height>251</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView_ModifyA">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>600</y>
+      <width>561</width>
+      <height>251</height>
+     </rect>
+    </property>
    </widget>
    <zorder>layoutWidget</zorder>
    <zorder>widget</zorder>
@@ -173,7 +200,8 @@
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
-   <zorder>createAButton</zorder>
+   <zorder>tableView_ShowPoint</zorder>
+   <zorder>tableView_ModifyA</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
