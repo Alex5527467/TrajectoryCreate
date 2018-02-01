@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>888</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>平面轨迹模型搭建</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>888</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuInitial_trajectory">
+    <property name="title">
+     <string>Initial trajectory</string>
+    </property>
+    <addaction name="actionEnter_1"/>
+   </widget>
+   <widget class="QMenu" name="menuSmoothing_trajectory">
+    <property name="title">
+     <string>Smoothing trajectory</string>
+    </property>
+    <addaction name="actionEnter_2"/>
+   </widget>
+   <widget class="QMenu" name="menuSpeed_trajectory">
+    <property name="title">
+     <string>Speed trajectory</string>
+    </property>
+    <addaction name="actionEnter_3"/>
+   </widget>
+   <addaction name="menuInitial_trajectory"/>
+   <addaction name="menuSmoothing_trajectory"/>
+   <addaction name="menuSpeed_trajectory"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionEnter_1">
+   <property name="text">
+    <string>Enter</string>
+   </property>
+  </action>
+  <action name="actionEnter_2">
+   <property name="text">
+    <string>Enter</string>
+   </property>
+  </action>
+  <action name="actionEnter_3">
+   <property name="text">
+    <string>Enter</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

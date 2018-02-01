@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1446</width>
+    <height>912</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>初始轨迹</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="D3Trajectory" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LowV_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>70</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>70</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LowV:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>100</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HighV:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="HighV_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>100</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>220</y>
+      <width>441</width>
+      <height>281</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="SpeedTrajectory" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>0</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LinearSpeedTrajectory" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>500</y>
+      <width>1001</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView_ShowPoint">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>500</y>
+      <width>441</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="MarkNum_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>130</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>1095</x>
+      <y>130</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Num:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ShowNum1_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>40</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>40</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Num2:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ShowNum2_lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>40</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>40</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Num1:</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>11</y>
+      <width>77</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="intialButton">
+       <property name="text">
+        <string>Intial</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="speedcreateButton">
+       <property name="text">
+        <string>SpeedCreate</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="marklowButton">
+       <property name="text">
+        <string>MarkLow</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="markhighButton">
+       <property name="text">
+        <string>MarkHigh</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="markpointButton">
+       <property name="text">
+        <string>MarkPoint</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>SavePra</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>widget</zorder>
+   <zorder>LowV_lineEdit</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>HighV_lineEdit</zorder>
+   <zorder>tableView</zorder>
+   <zorder>widget_2</zorder>
+   <zorder>widget_3</zorder>
+   <zorder>tableView_ShowPoint</zorder>
+   <zorder>MarkNum_lineEdit</zorder>
+   <zorder>label_5</zorder>
+   <zorder>ShowNum1_lineEdit</zorder>
+   <zorder>label_7</zorder>
+   <zorder>ShowNum2_lineEdit</zorder>
+   <zorder>label_8</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1446</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>D3Trajectory</class>
+   <extends>QWidget</extends>
+   <header>d3trajectory.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SpeedTrajectory</class>
+   <extends>QWidget</extends>
+   <header>speedtrajectory.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LinearSpeedTrajectory</class>
+   <extends>QWidget</extends>
+   <header location="global">linearspeedtrajectory.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
