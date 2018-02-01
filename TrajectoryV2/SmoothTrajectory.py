@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Alex\Desktop\Robot\PathGeneration20171101\TrajectoryNew\SmoothTrajectory.ui'
+# Form implementation generated from reading ui file 'C:\Users\Alex\TrajectoryCreate\TrajectoryV2\SmoothTrajectory.ui'
 #
-# Created: Wed Jan 31 11:11:43 2018
+# Created: Thu Feb 01 14:23:59 2018
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -33,14 +33,14 @@ except AttributeError:
 class Ui_MainWindow(QtGui.QMainWindow):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(1164, 644)
+        MainWindow.resize(1164, 899)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.widget = SmoothTrajectory(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(0, 0, 600, 600))
         self.widget.setObjectName(_fromUtf8("widget"))
         self.tableView = QtGui.QTableView(self.centralwidget)
-        self.tableView.setGeometry(QtCore.QRect(600, 0, 561, 371))
+        self.tableView.setGeometry(QtCore.QRect(600, 0, 561, 361))
         self.tableView.setObjectName(_fromUtf8("tableView"))
         self.Angle_lineEdit = QtGui.QLineEdit(self.centralwidget)
         self.Angle_lineEdit.setGeometry(QtCore.QRect(750, 450, 81, 21))
@@ -60,33 +60,42 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.label_3 = QtGui.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(710, 450, 41, 21))
         self.label_3.setObjectName(_fromUtf8("label_3"))
-        self.widget1 = QtGui.QWidget(self.centralwidget)
-        self.widget1.setGeometry(QtCore.QRect(620, 391, 82, 199))
-        self.widget1.setObjectName(_fromUtf8("widget1"))
-        self.verticalLayout = QtGui.QVBoxLayout(self.widget1)
+        self.layoutWidget = QtGui.QWidget(self.centralwidget)
+        self.layoutWidget.setGeometry(QtCore.QRect(620, 370, 82, 228))
+        self.layoutWidget.setObjectName(_fromUtf8("layoutWidget"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setMargin(0)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.intialButton = QtGui.QPushButton(self.widget1)
+        self.intialButton = QtGui.QPushButton(self.layoutWidget)
         self.intialButton.setObjectName(_fromUtf8("intialButton"))
         self.verticalLayout.addWidget(self.intialButton)
-        self.smoothButton = QtGui.QPushButton(self.widget1)
+        self.smoothButton = QtGui.QPushButton(self.layoutWidget)
         self.smoothButton.setObjectName(_fromUtf8("smoothButton"))
         self.verticalLayout.addWidget(self.smoothButton)
-        self.rotateButton = QtGui.QPushButton(self.widget1)
+        self.rotateButton = QtGui.QPushButton(self.layoutWidget)
         self.rotateButton.setObjectName(_fromUtf8("rotateButton"))
         self.verticalLayout.addWidget(self.rotateButton)
-        self.translateButton = QtGui.QPushButton(self.widget1)
+        self.translateButton = QtGui.QPushButton(self.layoutWidget)
         self.translateButton.setObjectName(_fromUtf8("translateButton"))
         self.verticalLayout.addWidget(self.translateButton)
-        self.adjustButton = QtGui.QPushButton(self.widget1)
+        self.adjustButton = QtGui.QPushButton(self.layoutWidget)
         self.adjustButton.setObjectName(_fromUtf8("adjustButton"))
         self.verticalLayout.addWidget(self.adjustButton)
-        self.createAButton = QtGui.QPushButton(self.widget1)
+        self.createAButton = QtGui.QPushButton(self.layoutWidget)
         self.createAButton.setObjectName(_fromUtf8("createAButton"))
         self.verticalLayout.addWidget(self.createAButton)
-        self.saveButton = QtGui.QPushButton(self.widget1)
+        self.modifyAButton = QtGui.QPushButton(self.layoutWidget)
+        self.modifyAButton.setObjectName(_fromUtf8("modifyAButton"))
+        self.verticalLayout.addWidget(self.modifyAButton)
+        self.saveButton = QtGui.QPushButton(self.layoutWidget)
         self.saveButton.setObjectName(_fromUtf8("saveButton"))
         self.verticalLayout.addWidget(self.saveButton)
+        self.tableView_ShowPoint = QtGui.QTableView(self.centralwidget)
+        self.tableView_ShowPoint.setGeometry(QtCore.QRect(0, 600, 601, 251))
+        self.tableView_ShowPoint.setObjectName(_fromUtf8("tableView_ShowPoint"))
+        self.tableView_ModifyA = QtGui.QTableView(self.centralwidget)
+        self.tableView_ModifyA.setGeometry(QtCore.QRect(600, 600, 561, 251))
+        self.tableView_ModifyA.setObjectName(_fromUtf8("tableView_ModifyA"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1164, 23))
@@ -99,13 +108,13 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-
         self.intialButton.clicked.connect(self.intial)
         self.smoothButton.clicked.connect(self.smooth)
         self.rotateButton.clicked.connect(self.rotate)
         self.translateButton.clicked.connect(self.translate)
         self.adjustButton.clicked.connect(self.adjust)
         self.createAButton.clicked.connect(self.createA)
+        self.modifyAButton.clicked.connect(self.modifyA)
         self.saveButton.clicked.connect(self.save)
 
     def retranslateUi(self, MainWindow):
@@ -119,13 +128,86 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.translateButton.setText(_translate("MainWindow", "Translate", None))
         self.adjustButton.setText(_translate("MainWindow", "DelIterant", None))
         self.createAButton.setText(_translate("MainWindow", "CreateA", None))
+        self.modifyAButton.setText(_translate("MainWindow", "ModifyA", None))
         self.saveButton.setText(_translate("MainWindow", "SavePra", None))
-
 
         self.Angle_lineEdit.setText(_translate("MainWindow", "-0.25*pi", None))
         self.TranX_lineEdit.setText(_translate("MainWindow", "1859", None))
         self.TranY_lineEdit.setText(_translate("MainWindow", "-383.665", None))
         self.tableView_set()#初始化表格
+        self.tableView1_set()
+        self.tableView2_set()
+
+
+
+    def tableView1_set(self):  
+          
+        #添加表头：  
+        self.model1 = QtGui.QStandardItemModel(self.tableView_ShowPoint)  
+  
+        #设置表格属性：  
+        self.model1.setRowCount(17)    
+        self.model1.setColumnCount(4)   
+          
+        #设置表头  
+        self.model1.setHeaderData(0,QtCore.Qt.Horizontal,_fromUtf8(u"Num"))  
+        self.model1.setHeaderData(1,QtCore.Qt.Horizontal,_fromUtf8(u"XHeight"))  
+        self.model1.setHeaderData(2,QtCore.Qt.Horizontal,_fromUtf8(u"YHeight"))
+        self.model1.setHeaderData(3,QtCore.Qt.Horizontal,_fromUtf8(u"Angle"))
+        
+        
+        self.tableView_ShowPoint.setModel(self.model1)  
+        #设置列宽  
+        self.tableView_ShowPoint.setColumnWidth(0,50)  
+        self.tableView_ShowPoint.setColumnWidth(1,100)  
+        self.tableView_ShowPoint.setColumnWidth(2,100)
+        self.tableView_ShowPoint.setColumnWidth(3,100)
+
+
+        #表头信息显示居中  
+        self.tableView_ShowPoint.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
+
+
+
+    def tableView2_set(self):  
+          
+        #添加表头：  
+        self.model2 = QtGui.QStandardItemModel(self.tableView_ModifyA)  
+  
+        #设置表格属性：  
+        self.model2.setRowCount(17)    
+        self.model2.setColumnCount(3)   
+          
+        #设置表头  
+        self.model2.setHeaderData(0,QtCore.Qt.Horizontal,_fromUtf8(u"BeginNum"))  
+        self.model2.setHeaderData(1,QtCore.Qt.Horizontal,_fromUtf8(u"EndNum"))  
+        self.model2.setHeaderData(2,QtCore.Qt.Horizontal,_fromUtf8(u"ModifyFuc"))
+
+        lineNum=0
+        with open('modifyApra.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                self.model2.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model2.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model2.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
+        
+        self.tableView_ModifyA.setModel(self.model2)  
+        #设置列宽  
+        self.tableView_ModifyA.setColumnWidth(0,100)  
+        self.tableView_ModifyA.setColumnWidth(1,100)  
+        self.tableView_ModifyA.setColumnWidth(2,100)
+
+
+
+        #表头信息显示居中  
+        self.tableView_ModifyA.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
 
 
     def tableView_set(self):  
@@ -180,7 +262,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
         Y=[]
         XMark=[]
         YMark=[]
-        #lineNum=0
         CutPoint=[]
         with open('IntialPoint.txt', 'r') as file_to_read:
             while True:
@@ -199,22 +280,30 @@ class Ui_MainWindow(QtGui.QMainWindow):
                     X.append(eval(b_tmp))
                     Y.append(eval(c_tmp))
                 
-              #  lineNum=lineNum+1
                 pass           
             pass
         self.startPlot1(X,Y,XMark,YMark,CutPoint)
         fileObject = open('SmoothPoint.txt', 'w')
         for i in range(0,len(X)):
-            fileObject.write(str(i)+' '+str(X[i])+' '+str(Y[i]))
-            fileObject.write('\n')
-            #if i in CutPoint:
-            #    fileObject.write(str(i)+' '+str(X[i])+' '+str(Y[i])+' 1')
-            #    fileObject.write('\n')
-            #else:
-            #    fileObject.write(str(i)+' '+str(X[i])+' '+str(Y[i])+' 0')
-            #    fileObject.write('\n')
-            
-        fileObject.close() 
+            fileObject.write(str(i)+' '+str(X[i])+' '+str(Y[i])+' 0')
+            fileObject.write('\n')   
+        fileObject.close()
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
 
 
     def smooth(self):
@@ -228,7 +317,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 pass           
@@ -244,7 +333,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                     XNew.extend(X[int(a):int(b)])
                     YNew.extend(Y[int(a):int(b)])
                 if str(d)=='True':
-                    xx = X[int(a):int(b)]
+                    xx = X[int(a):int(b)]        #为统一表格beginnum与finalnum规则待修改！！！！
                     yy = Y[int(a):int(b)]
                     xnew1 = xx
                     f = interp1d(xx, yy, kind='cubic')
@@ -261,14 +350,30 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         fileObject = open('SmoothPoint.txt', 'w')
         for i in range(0,len(XNew)):
-            fileObject.write(str(i)+' '+str(XNew[i])+' '+str(YNew[i]))
-            fileObject.write('\n')
-               
-        fileObject.close() 
+            fileObject.write(str(i)+' '+str(XNew[i])+' '+str(YNew[i])+' 0')
+            fileObject.write('\n')            
+        fileObject.close()
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
 
     def rotate(self):
         X=[]
         Y=[]
+        A=[]
         XRotate=[]
         YRotate=[]
         angle=str(self.Angle_lineEdit.text())
@@ -278,9 +383,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
+                A.append(eval(d_tmp))
                 pass           
             pass
         
@@ -298,10 +404,26 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         fileObject = open('SmoothPoint.txt', 'w')
         for i in range(0,len(XRotate)):
-            fileObject.write(str(i)+' '+str(XRotate[i])+' '+str(YRotate[i]))
+            fileObject.write(str(i)+' '+str(XRotate[i])+' '+str(YRotate[i])+' 0')
             fileObject.write('\n')
                
         fileObject.close()
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
 
         
     def translate(self):
@@ -317,7 +439,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 pass           
@@ -332,10 +454,25 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         fileObject = open('SmoothPoint.txt', 'w')
         for i in range(0,len(XTranslate)):
-            fileObject.write(str(i)+' '+str(XTranslate[i])+' '+str(YTranslate[i]))
-            fileObject.write('\n')
-               
+            fileObject.write(str(i)+' '+str(XTranslate[i])+' '+str(YTranslate[i])+' 0')
+            fileObject.write('\n')               
         fileObject.close()
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
 
     def adjust(self):
         xoffset=str(self.TranX_lineEdit.text())
@@ -356,7 +493,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 pass           
@@ -398,8 +535,26 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         fileObject = open('SmoothPoint.txt', 'w')
         for i in range(0,len(XAdjust)):
-            fileObject.write(str(i)+' '+str(XAdjust[i])+' '+str(YAdjust[i]))
+            fileObject.write(str(i)+' '+str(XAdjust[i])+' '+str(YAdjust[i])+' 0')
             fileObject.write('\n')
+
+        fileObject.close()
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
 
 
     def createA(self):
@@ -417,7 +572,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 pass           
@@ -443,10 +598,85 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
             
         
-        fileObject = open('Gradient.txt', 'w')
+        fileObject = open('SmoothPoint.txt', 'w')
         for i in range(0,len(Angle)):
             fileObject.write(str(i)+' '+str(X[i])+' '+str(Y[i])+' '+str(Angle[i]))
-            fileObject.write('\n') 
+            fileObject.write('\n')
+        fileObject.close()
+
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
+
+
+    def modifyA(self):
+        X=[]
+        Y=[]
+        Angle=[]
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                X.append(eval(b_tmp))
+                Y.append(eval(c_tmp))
+                Angle.append(eval(d_tmp))
+                pass           
+            pass
+        XNew=[]
+        YNew=[]
+        ANew=[]
+        for im in range(0,17):
+            a=self.model2.data(self.model2.index(im,0)).toPyObject()
+            b=self.model2.data(self.model2.index(im,1)).toPyObject()
+            c=self.model2.data(self.model2.index(im,2)).toPyObject()
+            if(a<>None and b<>None and c<>None  and a<>'' and b<>'' and c<>''):
+                for i in range(int(a),int(b)):
+                    a=Angle[int(i)]
+                    ANew.append(eval(str(c)))
+                    XNew.append(X[i])
+                    YNew.append(Y[i])               
+            else:
+                break
+
+
+        fileObject = open('SmoothPoint.txt', 'w')
+        for i in range(0,len(ANew)):
+            fileObject.write(str(i)+' '+str(XNew[i])+' '+str(YNew[i])+' '+str(ANew[i]))
+            fileObject.write('\n')
+        fileObject.close()
+
+
+        lineNum=0
+        with open('SmoothPoint.txt', 'r') as file_to_read:
+            while True:
+                lines = file_to_read.readline() # 整行读取数据
+                if not lines:
+                    break
+                    pass
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
+                self.model1.setItem(lineNum, 0,QtGui.QStandardItem(_fromUtf8(a_tmp)))
+                self.model1.setItem(lineNum, 1,QtGui.QStandardItem(_fromUtf8(b_tmp)))
+                self.model1.setItem(lineNum, 2,QtGui.QStandardItem(_fromUtf8(c_tmp)))
+                self.model1.setItem(lineNum, 3,QtGui.QStandardItem(_fromUtf8(d_tmp)))
+                lineNum=lineNum+1
+                pass           
+            pass
 
         
     
@@ -458,12 +688,25 @@ class Ui_MainWindow(QtGui.QMainWindow):
             b=self.model.data(self.model.index(im,1)).toPyObject()
             c=self.model.data(self.model.index(im,2)).toPyObject()
             d=self.model.data(self.model.index(im,3)).toPyObject()
-            if(a<>None and b<>None and c<>None and d<>None):
+            if(a<>None and b<>None and c<>None and d<>None and
+               a<>'' and b<>'' and c<>'' and d<>''):
                 fileObject.write(str(a)+' '+str(b)+' '+str(c)+' '+str(d))
                 fileObject.write('\n')
             else:
                 break
-        fileObject.close() 
+        fileObject.close()
+        
+        fileObject = open('modifyApra.txt', 'w')
+        for im in range(0,17):
+            a=self.model2.data(self.model2.index(im,0)).toPyObject()
+            b=self.model2.data(self.model2.index(im,1)).toPyObject()
+            c=self.model2.data(self.model2.index(im,2)).toPyObject()
+            if(a<>None and b<>None and c<>None and a<>'' and b<>'' and c<>''):
+                fileObject.write(str(a)+' '+str(b)+' '+str(c))
+                fileObject.write('\n')
+            else:
+                break
+        fileObject.close()
 
 class Code_MainWindow(Ui_MainWindow):
     def __init__(self, parent = None):
@@ -497,6 +740,9 @@ if __name__ == "__main__":
     ui = Code_MainWindow()
     ui.show()
 sys.exit(app.exec_())
+
+
+
 
 
 
