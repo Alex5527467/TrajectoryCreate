@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'C:\Users\Alex\TrajectoryCreate\TrajectoryV2\SmoothTrajectory.ui'
 #
-# Created: Thu Feb 01 14:23:59 2018
+# Created: Fri Feb 02 09:41:40 2018
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,22 +43,22 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.tableView.setGeometry(QtCore.QRect(600, 0, 561, 361))
         self.tableView.setObjectName(_fromUtf8("tableView"))
         self.Angle_lineEdit = QtGui.QLineEdit(self.centralwidget)
-        self.Angle_lineEdit.setGeometry(QtCore.QRect(750, 450, 81, 21))
+        self.Angle_lineEdit.setGeometry(QtCore.QRect(750, 430, 81, 21))
         self.Angle_lineEdit.setObjectName(_fromUtf8("Angle_lineEdit"))
         self.TranX_lineEdit = QtGui.QLineEdit(self.centralwidget)
-        self.TranX_lineEdit.setGeometry(QtCore.QRect(750, 480, 81, 20))
+        self.TranX_lineEdit.setGeometry(QtCore.QRect(750, 460, 81, 20))
         self.TranX_lineEdit.setObjectName(_fromUtf8("TranX_lineEdit"))
         self.TranY_lineEdit = QtGui.QLineEdit(self.centralwidget)
-        self.TranY_lineEdit.setGeometry(QtCore.QRect(870, 480, 81, 20))
+        self.TranY_lineEdit.setGeometry(QtCore.QRect(880, 460, 81, 20))
         self.TranY_lineEdit.setObjectName(_fromUtf8("TranY_lineEdit"))
         self.label = QtGui.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(720, 480, 16, 21))
+        self.label.setGeometry(QtCore.QRect(710, 460, 41, 21))
         self.label.setObjectName(_fromUtf8("label"))
         self.label_2 = QtGui.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(850, 480, 16, 21))
+        self.label_2.setGeometry(QtCore.QRect(840, 460, 41, 21))
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.label_3 = QtGui.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(710, 450, 41, 21))
+        self.label_3.setGeometry(QtCore.QRect(710, 430, 41, 21))
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.layoutWidget = QtGui.QWidget(self.centralwidget)
         self.layoutWidget.setGeometry(QtCore.QRect(620, 370, 82, 228))
@@ -96,6 +96,39 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.tableView_ModifyA = QtGui.QTableView(self.centralwidget)
         self.tableView_ModifyA.setGeometry(QtCore.QRect(600, 600, 561, 251))
         self.tableView_ModifyA.setObjectName(_fromUtf8("tableView_ModifyA"))
+        self.label_4 = QtGui.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(710, 520, 41, 21))
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.ShowNum_lineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.ShowNum_lineEdit.setGeometry(QtCore.QRect(750, 520, 81, 20))
+        self.ShowNum_lineEdit.setObjectName(_fromUtf8("ShowNum_lineEdit"))
+        self.pointplayButton = QtGui.QPushButton(self.centralwidget)
+        self.pointplayButton.setGeometry(QtCore.QRect(980, 370, 80, 23))
+        self.pointplayButton.setObjectName(_fromUtf8("pointplayButton"))
+        self.label_5 = QtGui.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(980, 460, 41, 21))
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.MinX_lineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.MinX_lineEdit.setGeometry(QtCore.QRect(1020, 460, 81, 20))
+        self.MinX_lineEdit.setObjectName(_fromUtf8("MinX_lineEdit"))
+        self.MaxX_lineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.MaxX_lineEdit.setGeometry(QtCore.QRect(1020, 490, 81, 20))
+        self.MaxX_lineEdit.setObjectName(_fromUtf8("MaxX_lineEdit"))
+        self.label_6 = QtGui.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(980, 490, 41, 21))
+        self.label_6.setObjectName(_fromUtf8("label_6"))
+        self.label_7 = QtGui.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(980, 550, 41, 21))
+        self.label_7.setObjectName(_fromUtf8("label_7"))
+        self.MaxY_lineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.MaxY_lineEdit.setGeometry(QtCore.QRect(1020, 550, 81, 20))
+        self.MaxY_lineEdit.setObjectName(_fromUtf8("MaxY_lineEdit"))
+        self.label_8 = QtGui.QLabel(self.centralwidget)
+        self.label_8.setGeometry(QtCore.QRect(980, 520, 41, 21))
+        self.label_8.setObjectName(_fromUtf8("label_8"))
+        self.MinY_lineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.MinY_lineEdit.setGeometry(QtCore.QRect(1020, 520, 81, 20))
+        self.MinY_lineEdit.setObjectName(_fromUtf8("MinY_lineEdit"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1164, 23))
@@ -119,8 +152,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "初始轨迹", None))
-        self.label.setText(_translate("MainWindow", "X:", None))
-        self.label_2.setText(_translate("MainWindow", "Y:", None))
+        self.label.setText(_translate("MainWindow", "TranX:", None))
+        self.label_2.setText(_translate("MainWindow", "TranY:", None))
         self.label_3.setText(_translate("MainWindow", "Angle:", None))
         self.intialButton.setText(_translate("MainWindow", "Intial", None))
         self.smoothButton.setText(_translate("MainWindow", "Smooth", None))
@@ -130,14 +163,24 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.createAButton.setText(_translate("MainWindow", "CreateA", None))
         self.modifyAButton.setText(_translate("MainWindow", "ModifyA", None))
         self.saveButton.setText(_translate("MainWindow", "SavePra", None))
+        self.label_4.setText(_translate("MainWindow", "ShowN:", None))
+        self.pointplayButton.setText(_translate("MainWindow", "PointPlay", None))
+        self.label_5.setText(_translate("MainWindow", "MinX:", None))
+        self.label_6.setText(_translate("MainWindow", "MaxX:", None))
+        self.label_7.setText(_translate("MainWindow", "MaxY:", None))
+        self.label_8.setText(_translate("MainWindow", "MinY:", None))
 
         self.Angle_lineEdit.setText(_translate("MainWindow", "-0.25*pi", None))
         self.TranX_lineEdit.setText(_translate("MainWindow", "1859", None))
         self.TranY_lineEdit.setText(_translate("MainWindow", "-383.665", None))
+        self.ShowNum_lineEdit.setText(_translate("MainWindow", "0", None))
+        self.MinX_lineEdit.setText(_translate("MainWindow", "1000", None))
+        self.MaxX_lineEdit.setText(_translate("MainWindow", "3000", None))
+        self.MinY_lineEdit.setText(_translate("MainWindow", "-1500", None))
+        self.MaxY_lineEdit.setText(_translate("MainWindow", "500", None))
         self.tableView_set()#初始化表格
         self.tableView1_set()
         self.tableView2_set()
-
 
 
     def tableView1_set(self):  
@@ -559,11 +602,16 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def createA(self):
 
+        minx=str(self.MinX_lineEdit.text())
+        maxx=str(self.MaxX_lineEdit.text())
+        miny=str(self.MinY_lineEdit.text())
+        maxy=str(self.MaxY_lineEdit.text())
+
+        Limit=[eval(minx),eval(maxx),eval(miny),eval(maxy)]
+
 
         X=[]
         Y=[]
-        XMark=[]
-        YMark=[]
         #主轴中心偏移坐标
         CircleOffset=1800
         with open('SmoothPoint.txt', 'r') as file_to_read:
@@ -582,6 +630,16 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
         xoffset=str(self.TranX_lineEdit.text())
         yoffset=str(self.TranY_lineEdit.text())
+        shownum=str(self.ShowNum_lineEdit.text())
+        
+        XMark=[X[int(shownum)]]
+        YMark=[Y[int(shownum)]]
+        ycutm=(eval(yoffset)+CircleOffset)/eval(xoffset)*eval(maxx)-CircleOffset
+        XCut=[0,eval(maxx)]
+        YCut=[-CircleOffset,ycutm]
+
+
+        self.startPlot3(X,Y,XMark,YMark,XCut,YCut,int(shownum),Limit)
 
         for i in range(0,len(X)):
             xk1=X[i]
@@ -721,7 +779,12 @@ class Code_MainWindow(Ui_MainWindow):
     def startPlot2(self,x,y):
         ''' begin to plot'''
         self.widget.startPlot2(x,y)
-        pass       
+        pass
+
+    def startPlot3(self,x,y,xmark,ymark,xcut,ycut,marknum,limit):
+        ''' begin to plot'''
+        self.widget.startPlot3(x,y,xmark,ymark,xcut,ycut,marknum,limit)
+        pass
     
     
     def closeEvent(self,event):
@@ -740,6 +803,12 @@ if __name__ == "__main__":
     ui = Code_MainWindow()
     ui.show()
 sys.exit(app.exec_())
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
 600*np.cos(i*2*pi/n-0.5*pi) 600*np.sin(i*2*pi/n-0.5*pi) 500 0 501
 (300*np.cos(-0.5*pi)-600*np.cos(1.5*pi))*i/n+600*np.cos(1.5*pi) (300*np.sin(-0.5*pi)-600*np.sin(1.5*pi))*i/n+600*np.sin(1.5*pi) 30 1 30
 300*np.cos(-i*2*pi/n+1.5*pi) 300*np.sin(-i*2*pi/n+1.5*pi) 350 0 351
-(600*np.cos(-0.5*pi)-300*np.cos(-0.5*pi))*i/n+300*np.cos(-0.5*pi) (600*np.sin(-0.5*pi)-300*np.sin(-0.5*pi))*i/n+300*np.sin(-0.5*pi) 30 1 30
+(600*np.cos(-0.5*pi)-300*np.cos(-0.5*pi))*i/n+300*np.cos(-0.5*pi) (600*np.sin(-0.5*pi)-300*np.sin(-0.5*pi))*i/n+300*np.sin(-0.5*pi) 30 1 31

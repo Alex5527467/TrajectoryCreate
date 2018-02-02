@@ -242,7 +242,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
             f=self.model.data(self.model.index(im,5)).toPyObject()
             g=self.model.data(self.model.index(im,6)).toPyObject()
             h=self.model.data(self.model.index(im,7)).toPyObject()
-            if(a<>None and b<>None and c<>None and d<>None and e<>None and f<>None and g<>None and h<>None):
+            if(a<>None and b<>None and c<>None and d<>None and e<>None and f<>None and g<>None and h<>None and
+               a<>'' and b<>'' and c<>'' and d<>'' and e<>'' and f<>'' and g<>'' and h<>''):
                 fileObject.write(str(a)+' '+str(b)+' '+str(c)+' '+str(d)+' '+str(e)+' '+str(f)+' '+str(g)+' '+str(h))
                 fileObject.write('\n')
             else:
@@ -262,7 +263,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 
@@ -286,7 +287,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 if(int(a_tmp)==markpoint):
                     XMark.append(eval(b_tmp))
                     YMark.append(eval(c_tmp))
@@ -311,7 +312,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 
@@ -371,7 +372,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
                 
@@ -427,15 +428,17 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         X=[]
         Y=[]
+        A=[]
         with open('SmoothPoint.txt', 'r') as file_to_read:
             while True:
                 lines = file_to_read.readline() # 整行读取数据
                 if not lines:
                     break
                     pass
-                a_tmp,b_tmp,c_tmp = [str(i) for i in lines.split()]
+                a_tmp,b_tmp,c_tmp,d_tmp = [str(i) for i in lines.split()]
                 X.append(eval(b_tmp))
                 Y.append(eval(c_tmp))
+                A.append(eval(d_tmp))
                 pass           
             pass
         Fvec=[]
@@ -464,7 +467,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
             h=self.model.data(self.model.index(im,7)).toPyObject()
             
             
-            if(a<>None and b<>None and c<>None and d<>None and e<>None and f<>None and g<>None and h<>None):
+            if(a<>None and b<>None and c<>None and d<>None and e<>None and f<>None and g<>None and h<>None and
+               a<>'' and b<>'' and c<>'' and d<>'' and e<>'' and f<>'' and g<>'' and h<>''):
                 
                 tbegin=tnow
                 vbegin=eval(str(c))                 #初始速度mm/min
@@ -573,7 +577,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
         fileObject = open('G-Point.txt', 'w')
         for key in range(0,len(X)):  
-            fileObject.write('G01 X'+str(X[key])+' Y'+str(Y[key])+' F'+str(Fvec[key]))
+            fileObject.write('G01 X'+str(X[key])+' Y'+str(Y[key])+' F'+str(Fvec[key])+' A'+str(A[key]))
             fileObject.write('\n')
 
         fileObject.close()

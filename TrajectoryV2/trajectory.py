@@ -111,7 +111,18 @@ class widget(FigureCanvas):
         self.ax.scatter(xmark,ymark)
         self.ax.annotate(cutpoint, xy=(xmark[0], ymark[0]), xytext=(xmark[0]+10, ymark[0]+10))
         self.draw()
-        
+    def plot8(self,datax,datay,xmark,ymark,cutx,cuty,marknum,limit):
+        self.ax.clear()
+        self.ax.set_xlim(limit[0],limit[1])
+        self.ax.set_ylim(limit[2],limit[3])
+        self.ax.set_title(u'Speed Trajectory',fontproperties=font)
+        self.ax.set_xlabel('X')
+        self.ax.set_ylabel('Y')
+        self.ax.plot(datax,datay)
+        self.ax.plot(cutx,cuty,color='red')
+        self.ax.scatter(xmark,ymark)
+        self.ax.annotate(marknum, xy=(xmark[0], ymark[0]), xytext=(xmark[0]+10, ymark[0]+10))
+        self.draw()
 
 
 class  IntialTrajectory(QtGui.QWidget):
@@ -159,6 +170,10 @@ class  SmoothTrajectory(QtGui.QWidget):
     def startPlot2(self,x,y):        
 
         self.canvas.plot3(x,y)
+
+    def startPlot3(self,x,y,xmark,ymark,xcut,ycut,marknum,limit):        
+
+        self.canvas.plot8(x,y,xmark,ymark,xcut,ycut,marknum,limit)
         
 class  SpeedTrajectory(QtGui.QWidget):
    
